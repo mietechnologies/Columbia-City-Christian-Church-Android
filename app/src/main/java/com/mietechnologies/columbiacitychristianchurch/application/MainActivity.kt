@@ -1,11 +1,9 @@
-package com.mietechnologies.columbiacitychristianchurch.dashboard
+package com.mietechnologies.columbiacitychristianchurch.application
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.material.MaterialTheme
+import com.mietechnologies.columbiacitychristianchurch.application.Application
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
