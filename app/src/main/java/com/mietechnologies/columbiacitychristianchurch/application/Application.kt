@@ -28,8 +28,8 @@ import com.mietechnologies.columbiacitychristianchurch.dashboard.Dashboard
         ) {
             ScrollingNavigationBar(viewModel)
 
-            when (viewModel.selectedTab) {
-//                AppTab.DASHBOARD -> Dashboard()
+            when (viewModel.selectedTab.value) {
+                AppTab.DASHBOARD -> Dashboard()
                 else -> {
                     Column(modifier = Modifier.align(Alignment.CenterHorizontally)) {
                         Row {
