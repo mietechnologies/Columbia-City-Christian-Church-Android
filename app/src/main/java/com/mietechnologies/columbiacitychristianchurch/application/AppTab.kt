@@ -1,4 +1,4 @@
-package com.mietechnologies.columbiacitychristianchurch.dashboard
+package com.mietechnologies.columbiacitychristianchurch.application
 
 enum class AppTab(val title: String) {
     DASHBOARD("Dashboard"),
