@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.mietechnologies.columbiacitychristianchurch.component.AppText
 
 @Composable fun ScrollingNavigationBar(viewModel: ApplicationViewModel) {
     var selectedTab by remember { viewModel.selectedTab }
@@ -46,7 +47,7 @@ import androidx.compose.ui.unit.dp
             ) {
                 val underlineColor: Color by animateColorAsState(if (selectedTab == tab) Color.Black else Color.Transparent)
 
-                Text(
+                AppText(
                     text = tab.title,
                     softWrap = false
                 )

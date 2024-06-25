@@ -22,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.mietechnologies.columbiacitychristianchurch.component.AppText
 
 @Composable fun Dashboard() {
     val viewModel = DashboardViewModel()
@@ -40,7 +41,7 @@ import androidx.compose.ui.unit.dp
         Column(
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            Text(introduction)
+            AppText(introduction)
             ServiceInfo()
             Divider()
             AddressInfo(

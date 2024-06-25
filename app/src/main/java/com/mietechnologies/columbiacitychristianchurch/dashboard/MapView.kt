@@ -14,20 +14,25 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import com.mapbox.geojson.Point
+import com.mapbox.maps.extension.compose.MapboxMap
+import com.mapbox.maps.extension.compose.animation.viewport.MapViewportState
 
 @Composable fun MapView(modifier: Modifier = Modifier) {
     Surface(modifier = modifier.fillMaxSize()) {
-        Box(Modifier.background(Color.Yellow))
-        Column(
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center
-            ) {
-                Text("Map")
+        MapboxMap(
+            modifier = modifier.fillMaxSize(),
+            mapViewportState = MapViewportState().apply {
+                setCameraOptions {
+                    this.zoom(16.0)
+                    // 41.170451537819794, -85.49108881611338
+                    this.center(Point.fromLngLat(-85.49108881611338, 41.170451537819794))
+                    this.pitch(0.0)
+                    this.bearing(0.0)
+                }
             }
+        ) {
+
         }
     }
 }
