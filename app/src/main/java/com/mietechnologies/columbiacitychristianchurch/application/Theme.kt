@@ -1,8 +1,11 @@
 package com.mietechnologies.columbiacitychristianchurch.application
 
+import androidx.compose.material.ButtonColors
+import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Typography
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
 
 @Composable fun AppTheme(content: @Composable () -> Unit) {
@@ -23,5 +26,23 @@ import androidx.compose.ui.unit.sp
             overline = Typography().overline.copy(fontSize = (Typography().overline.fontSize.value + 10f).sp),
         ),
         content = content
+    )
+}
+
+@Composable fun AppDefaultButtonColors(): ButtonColors {
+    return ButtonDefaults.buttonColors(
+        backgroundColor = Color.Blue,
+        contentColor = Color.White,
+        disabledBackgroundColor = Color.Blue.copy(alpha = 0.5f),
+        disabledContentColor = Color.White.copy(alpha = 0.5f)
+    )
+}
+
+@Composable fun AppDestructiveButtonColors(): ButtonColors {
+    return ButtonDefaults.buttonColors(
+        backgroundColor = Color.Red,
+        contentColor = Color.White,
+        disabledBackgroundColor = Color.Red.copy(alpha = 0.5f),
+        disabledContentColor = Color.White.copy(alpha = 0.5f)
     )
 }
