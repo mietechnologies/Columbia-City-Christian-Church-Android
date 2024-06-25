@@ -2,4 +2,5 @@
     <string name="app_name">Columbia City Christian Church</string>
     <string name="app_logo_content_description">The Columbia City Christian Church app logo</string>
     <string name="profile_image_content_description">The user\'s profile image on the navigation bar</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoibWlldGVjaCIsImEiOiJjbHh0cjRxcTEwN2p6MmpvY3pmbjcwaTJlIn0.qGApSrVRQSoflJAxdlVDBg</string>
 </resources>
