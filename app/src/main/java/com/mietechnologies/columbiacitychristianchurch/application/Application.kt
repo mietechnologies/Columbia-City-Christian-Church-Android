@@ -26,6 +26,7 @@ import com.mietechnologies.columbiacitychristianchurch.dashboard.Dashboard
         Column(
             modifier = Modifier
         ) {
+            NavigationBar(viewModel)
             ScrollingNavigationBar(viewModel)
 
             when (viewModel.selectedTab.value) {

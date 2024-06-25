@@ -8,10 +8,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import com.mietechnologies.columbiacitychristianchurch.component.AppText
 
 @Composable fun ServiceInfo() {
     Column {
-        Text("Sunday", fontWeight = FontWeight.Bold)
+        AppText("Sunday", fontWeight = FontWeight.Bold)
         Row {
             Column(
                 modifier = Modifier
@@ -19,10 +20,10 @@ import androidx.compose.ui.tooling.preview.Preview
                     .weight(1f)
             ) {
                 // TODO: Automatically format for system-like time
-                Text("10:00 AM")
+                AppText("10:00 AM")
             }
             Column {
-                Text("Worship Service")
+                AppText("Worship Service")
             }
         }
     }

@@ -91,6 +91,13 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata")
     // Optional - Integration with RxJava
     implementation("androidx.compose.runtime:runtime-rxjava2")
-
     // END: - Jetpack Compose dependencies
+
+    // MARK: - Coil
+//    implementation("io.coil-kt:coil:2.4.0")
+//    implementation("io.coil-kt:coil-compose:2.4.0")
+
+    // MARK: - Mapbox
+    implementation("com.mapbox.maps:android:11.4.1")
+    implementation("com.mapbox.extension:maps-compose:11.4.1")
 }

@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import com.mietechnologies.columbiacitychristianchurch.component.AppText
 
 @Composable fun AddressInfo(name: String, street: String, city: String, state: String, zip: String, phone: String) {
     Column {
@@ -23,9 +24,12 @@ import androidx.compose.ui.tooling.preview.Preview
                     .fillMaxWidth()
                     .weight(1f)
             ) {
-                Text(name, fontWeight = FontWeight.Bold)
-                Text(street)
-                Text("$city, $state $zip")
+                AppText(
+                    name,
+                    fontWeight = FontWeight.Bold
+                )
+                AppText(street)
+                AppText("$city, $state $zip")
             }
         }
 
@@ -36,7 +40,10 @@ import androidx.compose.ui.tooling.preview.Preview
                 }
         ) {
             // TODO: Automatically format phone number
-            Text(phone, color = Color.Blue)
+            AppText(
+                phone,
+                color = Color.Blue
+            )
         }
     }
 }

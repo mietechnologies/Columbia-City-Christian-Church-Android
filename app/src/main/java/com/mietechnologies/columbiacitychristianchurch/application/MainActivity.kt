@@ -3,6 +3,7 @@ package com.mietechnologies.columbiacitychristianchurch.application
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.compose.setContent
+import androidx.compose.material3.MaterialTheme
 import com.mietechnologies.columbiacitychristianchurch.application.Application
 
 class MainActivity : AppCompatActivity() {
@@ -11,7 +12,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            Application()
+            AppTheme {
+                Application()
+            }
         }
     }
 }
