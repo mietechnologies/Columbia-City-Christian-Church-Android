@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -27,6 +28,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mietechnologies.columbiacitychristianchurch.R
+import com.mietechnologies.columbiacitychristianchurch.component.AppText
 
 @Composable fun NavigationBar(viewModel: ApplicationViewModel) {
     var selectedTab by remember { viewModel.selectedTab }
@@ -37,13 +39,12 @@ import com.mietechnologies.columbiacitychristianchurch.R
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
                 .padding(8.dp)
-                .height(30.dp)
+                .height(40.dp)
                 .fillMaxWidth()
         ) {
-            // TODO: Icon
+            // TODO: Use actual icon once delivered
             Column(
                 modifier = Modifier
-                    .height(30.dp)
                     .clickable(
                         interactionSource = MutableInteractionSource(),
                         indication = null,
@@ -58,16 +59,14 @@ import com.mietechnologies.columbiacitychristianchurch.R
                 )
             }
 
-            Text(
+            AppText(
                 text = "Columbia City Christian Church",
-                fontWeight = FontWeight.Bold,
-                fontSize = 16.sp
+                fontWeight = FontWeight.Bold
             )
 
-            // TODO: Profile Image
+            // TODO: Load user's profile image instead
             Column (
                 modifier = Modifier
-                    .height(30.dp)
                     .clip(CircleShape)
             ) {
                 Image(

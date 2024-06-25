@@ -10,6 +10,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -18,15 +20,17 @@ import com.mapbox.geojson.Point
 import com.mapbox.maps.extension.compose.MapboxMap
 import com.mapbox.maps.extension.compose.animation.viewport.MapViewportState
 
-@Composable fun MapView(modifier: Modifier = Modifier) {
+@Composable fun MapView(viewModel: DashboardViewModel, modifier: Modifier = Modifier) {
+    val latitude by remember { viewModel.locationLat }
+    val longitude by remember { viewModel.locationLng }
+
     Surface(modifier = modifier.fillMaxSize()) {
         MapboxMap(
             modifier = modifier.fillMaxSize(),
             mapViewportState = MapViewportState().apply {
                 setCameraOptions {
                     this.zoom(16.0)
-                    // 41.170451537819794, -85.49108881611338
-                    this.center(Point.fromLngLat(-85.49108881611338, 41.170451537819794))
+                    this.center(Point.fromLngLat(longitude, latitude))
                     this.pitch(0.0)
                     this.bearing(0.0)
                 }
@@ -39,5 +43,5 @@ import com.mapbox.maps.extension.compose.animation.viewport.MapViewportState
 
 @Preview(showSystemUi = true)
 @Composable fun MapViewPreview() {
-    MapView()
+    MapView(DashboardViewModel())
 }

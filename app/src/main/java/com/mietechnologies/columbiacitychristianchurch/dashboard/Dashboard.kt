@@ -53,6 +53,7 @@ import com.mietechnologies.columbiacitychristianchurch.component.AppText
                 locationPhone
             )
             MapView(
+                viewModel = viewModel,
                 modifier = Modifier
                     .height(300.dp)
             )
